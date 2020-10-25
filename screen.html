@@ -2,12 +2,11 @@
 <html>
 <head>
 <title>Kasi Nametest</title>
+<script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>
 
 </head>
-<body id=bb style="background-image:url(resource/kasi_bg.jpg);background-size:100% auto;background-position:0 0;text-align:center;padding-top:90px;" >
+<body id=bb style="background-image:url(resource/kasi_bg.jpg);background-size:100% auto;background-position:0 0;text-align:center;padding-top:140px;" >
 
-	<script src=https://www.productlists.co.za/api.js ></script>
-	
 <iframe id=four_target src="//rcm-na.amazon-adsystem.com/e/cm?o=1&p=48&l=ur1&category=instruments&banner=0JB0A4VDS5FZSF8J66G2&f=ifr&linkID=957b6056e810aaba8d6734b832d49fbf&t=productlists4-20&tracking_id=productlists4-20" width="468" height="60" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
 
 	<div class=forward >
@@ -33,7 +32,54 @@
   },14000);
     </script>
 </div>
-	
+
+<script>
+
+var location_s = "resource/rr/";
+
+var kasi_s = 
+[
+"gugulethu.png",
+"khayelitsha.png",
+"sosha.png",
+"soweto.png",
+"thembisa.png",
+"umlazi.png",
+"kwamashu.png"
+];
+
+
+   FBInstant.initializeAsync()
+  .then(function(){
+  
+FBInstant.startGameAsync()
+  .then(function() {
+  
+  alert('Hello '+FBInstant.player.getName());
+  
+    for (var i=0; i < kasi_s.length; i++) {
+  var assetName = kasi_s[i];  
+  var progress = ((i+1)/kasi_s.length) * 100;  
+  game.load.image(location_s+assetName);
+
+  // Informs the SDK of loading progress
+  FBInstant.setLoadingProgress(progress);
+}
+
+  // Retrieving context and player information can only be done
+  // once startGameAsync() resolves
+  
+  var contextId = FBInstant.context.getID();
+  var contextType = FBInstant.context.getType();
+
+});
+
+
+  }
+);
+
+</script>
+
 <h1 id=title >Which Mzansi Kasi Are You From?</h1>
 <p id=subject >
 <strong>Type in your name to find out:</strong><br> 
