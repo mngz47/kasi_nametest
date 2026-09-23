@@ -12,8 +12,35 @@
 <body id=bb style="background-image:url(resource/kasi_bg.jpg);background-size:100% auto;background-position:0 0;text-align:center;padding-top:140px;" >
 
 <div id=country_info >
-<p></p>
-<p></p>
+<p style="display:none;" >
+
+The Financial Capital: Home to the New York Stock Exchange and Wall Street, the city is a global economic powerhouse that shapes international finance.
+Architectural Marvels: NYC is famous for its iconic skyline featuring legendary skyscrapers like the Empire State Building and the ultra-luxury towers along Billionaires' Row.
+Cultural Melting Pot: With residents from every corner of the globe, the city's diverse neighborhoods offer a rich mosaic of international traditions, arts, and world-class cuisine.
+Broadway & Entertainment: The Theater District is globally renowned for staging premier theatrical productions, cementing the city's status as a performing arts capital.
+Urban Green Space: Spanning 843 acres in the heart of Manhattan, Central Park provides a massive, beautifully landscaped sanctuary for recreation amidst the bustling metropolis.
+	
+</p>
+<p style="display:none;" >
+
+The Hollywood Sign: Originally erected in 1923 as "Hollywoodland," the iconic white letters originally advertised a local real estate development before becoming the global symbol of the entertainment industry.
+Griffith Observatory: Perched on the slope of Mount Hollywood, it offers sweeping views of the Los Angeles Basin and houses a public telescope used by millions of visitors.
+The Getty Center: Perched atop a hill in Brentwood, this renowned art museum is famous for its striking architecture, expansive gardens, and panoramic views of the city.
+Santa Monica Pier: Marking the western end of historic Route 66, the pier features an iconic solar-powered Ferris wheel, an aquarium, and classic seaside amusement attractions.
+Venice Beach Boardwalk: A vibrant and eclectic coastal stretch known for its lively street performers, the Muscle Beach outdoor gym, and a bustling skate park.
+
+	
+</p>
+<p style="display:none;" >
+
+The Alamo: Located in San Antonio, this historic fortress and former Roman Catholic mission was the site of the pivotal 1836 battle during the Texas Revolution.
+Space Center Houston: As the official visitor center of NASA Johnson Space Center, it allows visitors to explore space capsules, moon rocks, and astronaut training facilities.
+San Antonio River Walk: A scenic pedestrian network of city park walkways lined with shops, restaurants, and lush greenery along the San Antonio River.
+Big Bend National Park: Located in West Texas, this vast park encompasses the entire Chisos mountain range and large swaths of the Chihuahuan Desert, offering dramatic canyons along the Rio Grande.
+The State Capitol in Austin: Completed in 1888, the Texas State Capitol building is made of sunset red granite and stands taller than the U.S. Capitol in Washington, D.C.
+
+	
+</p>	
 </div>
 
 
@@ -46,13 +73,9 @@ var location_s = "resource/rr/";
 
 var kasi_s = 
 [
-"gugulethu.png",
-"khayelitsha.png",
-"sosha.png",
-"soweto.png",
-"thembisa.png",
-"umlazi.png",
-"kwamashu.png"
+"new_york.jpg",
+"los_angeles.png",
+"texas.png"
 ];
 
 
@@ -105,13 +128,9 @@ FBInstant.startGameAsync()
 
 var title_s = 
 [
-"Gugulethu",
-"Khayelitsha",
-"Sosha",
-"Soweto",
-"Thembisa",
-"Umlazi",
-"Kwamashu"
+"New York",
+"Los Angeles",
+"Texas"
 ];
 var nn;
 var ii;
@@ -137,6 +156,8 @@ ii = Math.round(Math.random()*6);
 
 document.getElementById("bb").style.backgroundImage = "url("+location_s+kasi_s[ii]+")";
 document.getElementById("title").innerHTML = nn+" you are from "+title_s[ii];
+	//display description about city
+	document.getElementById("country_info").getElementsByTagName("p")[ii].style.display = "";
 document.getElementById("title").style.color = "red";
 document.getElementById("subject").style.display = "none";
 document.getElementById("final").style.display = "inline-block";
