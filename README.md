@@ -22,4 +22,5 @@ https://mngz47.github.io/kasi_nametest/
 
 <h3>Socials</h3>
 https://instagram.com/mongezisibongakonke<br>
-https://www.youtube.com/watch?v=B4RgQEuzcLY
+https://www.youtube.com/@more.brezscales<br>
+https://www.tiktok.com/@44streamerclips
